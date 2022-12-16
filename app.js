@@ -21,7 +21,7 @@ botao.onclick = function() {
     }else {
         while (c < tot) {
             let num = Math.floor(Math.random() * max+1)
-            if (!sorteados.includes(num)) {
+            if (!sorteados.includes(num) && num >= min && num <= max) {
                 res.innerHTML += '<div class="result-value">' + num + '</div>'
                 sorteados.push(num)
                 c++
